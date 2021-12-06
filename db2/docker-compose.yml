@@ -1,0 +1,13 @@
+version: '2.1'
+services:
+  db2server:
+    image: ibmcom/db2
+    privileged: True
+    ports:
+     - 50000:50000
+    environment:
+     - LICENSE=accept 
+     - DBNAME=SAMPLEDB
+     - DB2INST1_PASSWORD==123456
+    volumes: 
+     - ./db2data:/database
