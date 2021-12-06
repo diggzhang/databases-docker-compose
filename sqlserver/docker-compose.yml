@@ -8,5 +8,5 @@ services:
     environment:
      - ACCEPT_EULA=Y
      - MSSQL_PID=Standard
-     - SA_PASSWORD=123456
+     - SA_PASSWORD=123456789
      - MSSQL_AGENT_ENABLED=true
