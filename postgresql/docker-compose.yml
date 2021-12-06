@@ -1,0 +1,14 @@
+version: '2.1'
+services:
+    postgres:
+        # $ PGPASSWORD=123456 psql -h "localhost" -p 54367 -U postgres sample_database
+        image: postgres:9.6
+        ports:
+            - 5432:5432
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=123456
+            - POSTGRES_DB=sample_database
+            - PGDATA=/var/lib/postgresql/data
+        volumes:
+            - ./pgdata:/var/lib/postgresql/data
